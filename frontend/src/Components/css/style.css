@@ -14,7 +14,7 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 700;
+
   color: rgb(253, 117, 0);
 }
 
@@ -89,9 +89,8 @@ nav #menu-close {
 nav .navigation ul li button,
 nav .navigation ul li a {
   text-decoration: none;
-  color: rgb(253, 117, 0);
+  color:  rgb(253, 117, 0);
   font-size: 17px;
-  font-weight: 700;
   transition: 0.3s ease;
 }
 
@@ -103,14 +102,13 @@ nav .navigation ul li button {
   background-color: gold;
   border: none;
   border-radius: 8px;
-  color: rgb(250, 250, 250);
-  font-size: 15px;
-  font-weight: 500;
+  color: rgb(253, 117, 0);
   cursor: pointer;
 }
 
 nav .navigation ul li button:hover {
-  background-color: #f3a209;
+  background-color: rgb(253, 117, 0);
+  color: gold;
 }
 
 nav .navigation ul li a.active,
@@ -154,7 +152,6 @@ nav .navigation ul li a:hover {
   font-size: 0.9rem;
   padding: 13px 30px;
   background-color: #fff;
-  font-weight: 600;
   border-radius: 5px;
 }
 #home a.blue {
@@ -197,13 +194,11 @@ nav .navigation ul li a:hover {
 }
 #features .fea-box h3 {
   font-size: 1.2rem;
-  font-weight: 600;
   color: rgb(44, 44, 80);
   padding: 13px 0 7px 0;
 }
 #features .fea-box p {
   font-size: 1rem;
-  font-weight: 400;
   color: rgb(255, 255, 255);
 }
 
@@ -300,7 +295,6 @@ nav .navigation ul li a:hover {
   margin: 0 5px 10px 5px;
   border: 1px solid rgba(225, 225, 225, 0.18);
   font-size: 1.1rem;
-  font-weight: 600;
   color: rgb(255, 255, 255);
 }
 #registration .form {
@@ -324,7 +318,7 @@ nav .navigation ul li a:hover {
 
 #registration .form input::placeholder {
   color: #413c3c;
-  font-weight: 500;
+
   font-size: 0.9rem;
 }
 #registration .form .btn {
@@ -335,7 +329,7 @@ nav .navigation ul li a:hover {
   font-size: 0.9rem;
   padding: 13px 35px;
   background-color: #fff;
-  font-weight: 600;
+
   border-radius: 5px;
   color: #fff;
   background-color: #fdc93b;
@@ -362,7 +356,7 @@ footer #footer .footer-col {
 }
 footer h3 {
   color: #fff;
-  font-weight: 600;
+
   padding-bottom: 20px;
 }
 footer li {
@@ -454,7 +448,7 @@ footer .copyright .pro-links .i:hover {
 }
 #about-container .about-text p {
   color: #686f7a;
-  font-weight: 300;
+
 }
 #about-container .about-text .about-fe {
   display: flex;
@@ -501,7 +495,7 @@ nav .navigation ul li.close-button button {
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
-  font-weight: bold;
+
 }
 
 /* responsive */
@@ -509,7 +503,7 @@ nav .navigation ul li.close-button button {
 @media (max-width: 769px) {
   /* navbarmenu */
   nav #menu-btn {
-    font-weight: bold;
+
     display: flex;
     justify-content: center;
     margin-left: 65px;
@@ -574,7 +568,7 @@ nav .navigation ul li.close-button button {
 
     padding: 8px 15px;
     background-color: #fff;
-    font-weight: 800;
+
     border-radius: 5px;
     color: #0d0046;
     background-color: #fdc93b;
@@ -595,7 +589,7 @@ nav .navigation ul li.close-button button {
   }
   #registration {
     margin-top: 8vw;
-    padding: 6vw 4vw 6vw 4 vw;
+    padding: 6vw 4vw 6vw 4vw;
     display: flex;
     flex-direction: column;
     align-items: start;

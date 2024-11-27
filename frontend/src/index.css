@@ -68,7 +68,6 @@ h2 {
 }
 
 label {
-  font-weight: bold;
   display: block;
   text-align: left;
 }
@@ -300,7 +299,6 @@ span a:hover {
 }
 .nav ul li {
   font-size: 18px;
-  font-weight: bold;
   list-style: none;
   margin-left: 22px;
 }
@@ -368,7 +366,6 @@ span a:hover {
 
 .course-heading {
   font-size: 1.5rem;
-  font-weight: bold;
   margin: 10px 0;
 }
 
@@ -432,7 +429,6 @@ span a:hover {
   }
   .course-heading {
     font-size: 0.8rem;
-    font-weight: bold;
     margin: 10px 0;
   }
   .course-description {
@@ -452,8 +448,9 @@ span a:hover {
 
 .navigation ul li .sign-out-button {
   background-color: gold;
-  color: white;
+  color: rgb(253, 117, 0);
   border: none;
+
   padding: -1px;
   border-radius: 5px;
   cursor: pointer;
@@ -462,6 +459,7 @@ span a:hover {
 
 .navigation ul li .sign-out-button:hover {
   background-color: #f3a209;
+  color: gold;
 }
 
 #footer {
@@ -624,7 +622,7 @@ img {
 #contact .getin h2 {
   color: #2c234d;
   font-size: 30px;
-  font-weight: 800;
+
   line-height: 0.8;
   margin-bottom: 16px;
 }
@@ -640,7 +638,7 @@ img {
 #contact .getin h3 {
   color: #2c234d;
   font-size: 16px;
-  font-weight: 600;
+
   line-height: 26px;
   margin-bottom: 15px;
 }
@@ -657,7 +655,7 @@ img {
   line-height: 22px;
   color: #ef25a8;
   margin-right: 8px;
-  margin-top: 10x;
+  margin-top: 10px;
 }
 #contact .getin .getin-details p {
   font-size: 14px;
@@ -716,7 +714,7 @@ img {
 #contact .form .form-row input {
   width: 48%;
   font-size: 14px;
-  font-weight: 400;
+
   border-radius: 3px;
   border: none;
   background: #fff;
@@ -730,7 +728,7 @@ img {
 #contact .form .form-col textarea {
   width: 100%;
   font-size: 14px;
-  font-weight: 400;
+
   border-radius: 5px;
   border: none;
   background: #fff;
@@ -747,7 +745,7 @@ img {
   border-radius: 5px;
   outline: none;
   border: none;
-  font-weight: 600;
+
   cursor: pointer;
 }
 #contact .form button:hover {
@@ -882,7 +880,7 @@ button[type="submit"]:hover {
 .option {
   margin: 5px 0;
   color: black;
-  font-weight: normal;
+
 }
 
 /* Style for radio buttons */
@@ -987,21 +985,19 @@ input[type="radio"] {
 
 .book_name {
   font-size: 20px;
-  font-weight: bold;
   margin: 5px 0;
   text-align: center;
 }
 
 .book_author {
   font-size: 16px;
-  font-weight: 500;
   margin: 5px 0;
   text-align: center;
 }
 
 .book_price {
   font-size: 16px;
-  font-weight: 500;
+
   margin: 5px 0;
   text-align: center;
 }
@@ -1017,7 +1013,7 @@ input[type="radio"] {
   border: none;
   font-size: 12px;
   text-transform: uppercase;
-  font-weight: bold;
+
   cursor: pointer;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -1054,7 +1050,7 @@ input[type="radio"] {
 .performance-table th {
   background-color: #ff69f3;
   color: #fff;
-  font-weight: bold;
+
 }
 
 .performance-table tr:nth-child(even) {
@@ -1074,14 +1070,14 @@ input[type="radio"] {
 .completed-status,
 .pending-status {
   padding: 8px 12px;
-  font-weight: bold;
+
 }
 .completed-status {
   color: #21a700;
 }
 .completed-certificate {
   color: #0073ee;
-  font-weight: bold;
+
   cursor: pointer;
 }
 
@@ -1131,7 +1127,7 @@ input[type="radio"] {
 }
 
 .completion-percent {
-  font-weight: bold;
+
   color: #27ae60;
 }
 
