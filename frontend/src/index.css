@@ -458,7 +458,7 @@ span a:hover {
 }
 
 .navigation ul li .sign-out-button:hover {
-  background-color: #f3a209;
+  background-color: rgb(253, 117, 0);
   color: gold;
 }
 
