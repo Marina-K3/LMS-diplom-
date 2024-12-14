@@ -155,23 +155,23 @@ nav .navigation ul li a:hover {
   border-radius: 5px;
 }
 #home a.blue {
-  color: #fff;
-  background-color: rgb(21, 21, 100);
+  color: rgb(253, 117, 0);
+  background-color: gold;
   transition: 0.3s ease;
 }
 #home a.blue:hover {
-  color: rgb(21, 21, 100);
-  background-color: #fff;
+  color: rgb(253, 117, 0);
+  background-color: #e0bf11;
 }
 #home a.yellow {
   margin-left: 10px;
-  color: #fff;
-  background-color: #e6b632;
+  color: gold;
+  background-color: rgb(253, 117, 0);
   transition: 0.3s ease;
 }
 #home a.yellow:hover {
-  color: rgb(21, 21, 100);
-  background-color: #fff;
+  color: gold;
+  background-color: rgb(224, 88, 16);
 }
 /* features */
 #features {

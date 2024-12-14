@@ -47,6 +47,7 @@ public class UserController {
     public User getUserByEmail(@RequestParam String email) {
         return userService.getUserByEmail(email);
     }
+
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
         String email = credentials.get("email");

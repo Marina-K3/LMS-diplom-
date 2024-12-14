@@ -22,6 +22,7 @@ import Performance from './Components/DashBoard/Performance';
 import DTutors from './Components/DashBoard/DTutors';
 import certificate from './Components/certificate';
 import Forum from './Components/forum';
+import RegressionAnalysis from './Components/RegressionAnalysis';
 
 
 
@@ -48,6 +49,7 @@ function App() {
           <Route path='/Dusers' Component={DUsers}></Route>
           <Route path='/Dtutors' Component={DTutors}></Route>
           <Route path='/Performance' Component={Performance} />
+          <Route path="/regression" Component={RegressionAnalysis} />
           <Route path='*' Component={ErrorPage}></Route>
         </Routes>
       </BrowserRouter>
