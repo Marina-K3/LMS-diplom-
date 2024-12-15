@@ -22,45 +22,61 @@ function Login() {
         },
         body: JSON.stringify({ email, password }),
       });
+
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
         localStorage.setItem("email", email);
-        console.log(data.token);
+
+        // Разбираем данные из токена
+        const tokenParts = data.token.split(", ");
+        const role = tokenParts.find((part) => part.startsWith("role=")).split("=")[1];
+
+        // Получение пользовательских данных (опционально)
         const userDetailsResponse = await fetch(
-          `http://localhost:8080/api/users/details?email=${email}`
+            `http://localhost:8080/api/users/details?email=${email}`
         );
 
         if (userDetailsResponse.ok) {
-          const ud = await userDetailsResponse.json();
-          localStorage.setItem("name", ud["username"]);
-          localStorage.setItem("id", ud["id"]);
-          console.log("Hello");
-          setUser({ name: ud["name"], email: email, id: ud["id"] });
-          navigate("/courses");
+          const userDetails = await userDetailsResponse.json();
+          localStorage.setItem("name", userDetails.username);
+          localStorage.setItem("id", userDetails.id);
+          setUser({ name: userDetails.username, email, id: userDetails.id, role });
+
+          // Редирект по роли
+          if (role === "admin") {
+            navigate("/dashboard");
+          } else if (role === "hr") {
+            navigate("/dashboard");
+          } else if (role === "employee") {
+            navigate("/courses");
+          } else {
+            setError("Invalid user role.");
+          }
         } else {
           setError("An error occurred while fetching user details.");
         }
       } else {
-        const data = await response.json();
-        setError(data.error);
+        const errorData = await response.json();
+        setError(errorData.error || "Invalid email or password.");
       }
     } catch (error) {
       setError("An error occurred. Please try again.");
     }
   };
 
+
   return (
     <div>
       <Navbar />
       <div className="auth">
         <div className="container">
-          <h3>Welcome!</h3>
+          <h3>Приветствуем!</h3>
           <br></br>
-          <h2>Login</h2>
+          <h2>Вход</h2>
           <br />
           <form autoComplete="off" className="form-group" onSubmit={login}>
-            <label htmlFor="email">Email Id :</label>
+            <label htmlFor="email">Email:</label>
             <input
               type="email"
               className="form-control"
@@ -69,7 +85,7 @@ function Login() {
               value={email}
             />
             <br />
-            <label htmlFor="password">Password : </label>
+            <label htmlFor="password">Пароль: </label>
             <input
               type="password"
               className="form-control"
@@ -87,8 +103,8 @@ function Login() {
           {error && <span className="error-msg">{error}</span>}
           <br />
           <span>
-            Don't have an account? Register
-            <Link to="/register"> Here</Link>
+            Нет аккаунта?
+            <Link to="/register"> Регистрация</Link>
           </span>
         </div>
       </div>

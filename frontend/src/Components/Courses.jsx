@@ -86,30 +86,43 @@ function Courses() {
 return (
 <div>
   <Navbar page={"courses"}/>
-     <div className="courses-container" style={{marginTop :"20px"}}>
-      {courses.map((course) => (
-        <div key={course.course_id} className="course-card">
-          
-            <img src={course.p_link} alt={course.course_name} className="course-image" />
-            <div className="course-details">
-              <h3 className="course-heading">
-                {course.courseName.length < 8
-                  ? `${course.courseName} Tutorial`
-                  : course.courseName
-                }
-              </h3>
-              <p className="course-description" style={{color:"grey"}}>Price: Rs.{course.price}</p>
-              <p className="course-description">Tutorial by {course.instructor}</p>
-            </div> 
-          {enrolled.includes(course.course_id) ? (<button className="enroll-button" style={{color:'#F4D03F',backgroundColor:'darkblue',fontWeight:'bold'}} onClick={() => navigate("/learnings")}>
-            Enrolled
-          </button> ):(<button className="enroll-button" onClick={() => enrollCourse(course.course_id)}>
-            Enroll
-          </button> )}
-        </div>
-      ))}
-     </div>
+
+    <div className="courses-container" style={{marginTop: "20px"}}>
+        {courses.map((course) => (
+            <div key={course.course_id} className="course-card">
+                <img src={course.p_link} alt={course.course_name} className="course-image" />
+                <div className="course-details">
+                    <h3 className="course-heading">
+                        {course.courseName.length < 8
+                            ? `${course.courseName} Курс`
+                            : course.courseName
+                        }
+                    </h3>
+                    <p className="course-description" style={{color: "grey"}}>Цена: ₽{course.price}</p>
+                    <p className="course-description">Преподаватель: {course.instructor}</p>
+                </div>
+                {enrolled.includes(course.course_id) ? (
+                    <button
+                        className="enroll-button"
+                        style={{color: '#F4D03F', backgroundColor: 'darkblue', fontWeight: 'bold'}}
+                        onClick={() => navigate("/learnings")}
+                    >
+                        Записан
+                    </button>
+                ) : (
+                    <button
+                        className="enroll-button"
+                        onClick={() => enrollCourse(course.course_id)}
+                    >
+                        Записаться
+                    </button>
+                )}
+            </div>
+        ))}
     </div>
+
+
+</div>
   );
 }
 

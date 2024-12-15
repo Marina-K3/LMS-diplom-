@@ -9,26 +9,26 @@ function SideBar(props){
         
         <Link to={"/dashboard"} className="brand a">
           <img src={img1} alt=""/>
-          <span className="text" id="admin">LMS Admin</span>
+          <span className="text" id="admin">LMS admin</span>
           </Link>
           
           <ul className="side-menu">
           <li className={current ==="dashboard" ? 'active' : ''} >
             <Link to={"/dashboard"} className="a">
               <i className='bx bxs-dashboard' id="i"></i>
-              <span className="text">Dashboard</span>
+              <span className="text">Панель управления</span>
             </Link>
           </li>
           <li  className={current ==="user" ? 'active' : ''}>
           <Link to={"/Dusers"} className="a">
               <i className='bx bxs-group' id="i"></i>
-              <span className="text">Users</span>
+              <span className="text">Пользователи</span>
             </Link>
           </li>
           <li className={current ==="courses" ? 'active' : ''}>
           <Link to={"/DCourses"} className="a">
               <i className='bx bxs-book' id="i"></i>
-              <span className="text">Courses</span>
+              <span className="text">Курсы</span>
             </Link>
           </li>
         </ul>

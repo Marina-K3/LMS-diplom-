@@ -47,39 +47,52 @@ function Forum() {
   console.log(course);
 
   return (
-    <div className="Forum">
-      <h2 style={{ color: 'black', marginLeft: '16px' }}>Discussion Forum for {course?.course_name}</h2>
-      
-      <div className='inputContainer'>
-        <textarea
-          cols='30'
-          rows='5'
-          type='text'
-          ref={taskRef}
-          name="taskInput"
-          value={formData.content}
-          onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-        />
+      <div className="Forum">
+        <h2 style={{ color: 'black', marginLeft: '16px' }}>
+          Форум для обсуждений: {course?.course_name}
+        </h2>
+
+        <div className='inputContainer'>
+    <textarea
+        cols='30'
+        rows='5'
+        type='text'
+        ref={taskRef}
+        name="taskInput"
+        value={formData.content}
+        onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+    />
+        </div>
+        <div className='snd'>
+          <button onClick={addTask}>Отправить</button>
+        </div>
+        {message.length > 0 &&
+            <div className='taskContainer'>
+              {message.map((value, key) => {
+                if (value.content.trim() !== "") {
+                  return (
+                      <div className='taskItem' key={key}>
+                        <p style={{ color: 'black' }}>
+                          <div style={{
+                            fontSize: "12px",
+                            padding: "2px",
+                            borderRadius: "8px",
+                            color: "brown",
+                            marginLeft: "-9px",
+                            marginTop: "-10px",
+                            fontWeight: "bold"
+                          }}>
+                            {value.uName}
+                          </div>
+                          {value.content}
+                        </p>
+                      </div>
+                  );
+                }
+                return null;
+              })}
+            </div>}
       </div>
-      <div className='snd'>
-        <button onClick={addTask}>Send</button>
-      </div>
-      {message.length>0 &&
-      <div className='taskContainer'>
-        
-        {message.map((value, key) => {  
-          if (value.content.trim() !== "") {
-            return (
-              <div className='taskItem' key={key}>
-                <p style={{ color: 'black' }}><div style={{fontSize:"12px" ,padding:"2px",borderRadius:"8px" , color:"brown", marginLeft:"-9px" , marginTop:"-10px" , fontWeight:"bold"}}>{value.uName}</div>{value.content}</p>
-              </div>
-            );
-          }
-          return null;
-        })}
-      </div>}
-      
-    </div>
   );
 }
 

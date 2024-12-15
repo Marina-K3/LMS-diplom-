@@ -30,184 +30,149 @@ function Home() {
   return (
     <div>
       <Navbar page={"home"} />
+
       <div>
         <section id="home">
           <h2>Улучшайте свои знания с помощью LearnSuite</h2>
           <p>
-            {" "}
-            LearnMasterSuite- это крупный провайдер открытых онлайн-курсов, его программа
-            разбивает курсовые работы на серию модулей и
-            уроков, которые могут включать видео, текстовые заметки и тесты для оценки.
+            LearnMasterSuite — это крупный провайдер открытых онлайн-курсов. Программа
+            курса разбивает материалы на серию модулей и уроков, которые включают видео, текстовые заметки и тесты для оценки.
           </p>
           <div className="btn">
             <a className="blue" href="#">
-              Learn More
+              Подробнее
             </a>
             <a className="yellow" href="#">
-              Visit Courses
+              Перейти к курсам
             </a>
           </div>
         </section>
         <section id="features">
-          <h1>Awesome Features</h1>
-          <p>Chance to enhance yourself</p>
+          <h1>Основные преимущества</h1>
+          <p>Шанс улучшить себя</p>
           <div className="fea-base">
             <div className="fea-box">
               <FontAwesomeIcon icon={faGraduationCap} className="i" />
-              <h3>Scholarship Facility</h3>
-              <p>Originality is the essence of true scholarship. </p>
+              <h3>Стипендии</h3>
+              <p>Оригинальность — основа истинной стипендии.</p>
             </div>
             <div className="fea-box">
               <FontAwesomeIcon icon={faStar} className="i" />
-              <h3>Valuable Courses</h3>
-              <p>
-                Online education is like a rising tide, it's going to lift all
-                boats.{" "}
-              </p>
+              <h3>Ценные курсы</h3>
+              <p>Онлайн-образование — как прилив, поднимающий все лодки.</p>
             </div>
             <div className="fea-box">
               <FontAwesomeIcon icon={faAward} className="i" />
-              <h3>Global Certification</h3>
-              <p>
-                A certificate without knowledge is like a gun without bullets in
-                your hand.{" "}
-              </p>
+              <h3>Международная сертификация</h3>
+              <p>Сертификат без знаний — это как пистолет без пуль в руках.</p>
             </div>
           </div>
         </section>
         <section id="course">
-          <h1>Our Popular Courses</h1>
-          <p>10,000+ enrolled</p>
+          <h1>Наши популярные курсы</h1>
+          <p>10 000+ участников</p>
           <div className="course-box">
-            {/* ... (Course content here) */}
             <div className="courses">
               <img src={c1} alt="" />
               <div className="details">
-                <p>Updated 12/08/23</p>
-                <h6>JavaScript Beginner Course</h6>
+                <p>Обновлено 12.08.23</p>
+                <h6>Курс для начинающих по JavaScript</h6>
                 <div className="star">
                   {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon key={index} icon={faStar} className="i" />
+                      <FontAwesomeIcon key={index} icon={faStar} className="i" />
                   ))}
                   <p>(239)</p>
                 </div>
               </div>
-              <div className="cost">$49.99</div>
+              <div className="cost">₽3,999.00</div>
             </div>
             <div className="courses">
               <img src={c2} alt="" />
               <div className="details">
-                <p>Updated 12/08/23</p>
-                <h6>HTML Complete Course</h6>
+                <p>Обновлено 12.08.23</p>
+                <h6>Полный курс по HTML</h6>
                 <div className="star">
                   {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon key={index} icon={faStar} className="i" />
+                      <FontAwesomeIcon key={index} icon={faStar} className="i" />
                   ))}
                   <p>(239)</p>
                 </div>
               </div>
-              <div className="cost">$49.99</div>
+              <div className="cost">₽3,999.00</div>
             </div>
             <div className="courses">
               <img src={c3} alt="" />
               <div className="details">
-                <p>Updated 12/08/23</p>
-                <h6>SQL Beginner Course</h6>
+                <p>Обновлено 12.08.23</p>
+                <h6>Курс для начинающих по SQL</h6>
                 <div className="star">
                   {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon key={index} icon={faStar} className="i" />
+                      <FontAwesomeIcon key={index} icon={faStar} className="i" />
                   ))}
                   <p>(239)</p>
                 </div>
               </div>
-              <div className="cost">$49.99</div>
+              <div className="cost">₽3,999.00</div>
             </div>
             <div className="courses">
               <img src={c4} alt="" />
               <div className="details">
-                <p>Updated 12/08/23</p>
-                <h6>Python Master Course</h6>
+                <p>Обновлено 12.08.23</p>
+                <h6>Курс мастера Python</h6>
                 <div className="star">
                   {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon key={index} icon={faStar} className="i" />
+                      <FontAwesomeIcon key={index} icon={faStar} className="i" />
                   ))}
                   <p>(239)</p>
                 </div>
               </div>
-              <div className="cost">$49.99</div>
-            </div>
-            <div className="courses">
-              <img src={c5} alt="" />
-              <div className="details">
-                <p>Updated 12/08/23</p>
-                <h6>Java Essentials</h6>
-                <div className="star">
-                  {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon key={index} icon={faStar} className="i" />
-                  ))}
-                  <p>(239)</p>
-                </div>
-              </div>
-              <div className="cost">$49.99</div>
-            </div>
-            <div className="courses">
-              <img src={c6} alt="" />
-              <div className="details">
-                <p>Updated 12/08/23</p>
-                <h6>CSS Complete Course</h6>
-                <div className="star">
-                  {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon key={index} icon={faStar} className="i" />
-                  ))}
-                  <p>(239)</p>
-                </div>
-              </div>
-              <div className="cost">$49.99</div>
+              <div className="cost">₽3,999.00</div>
             </div>
           </div>
         </section>
         <section id="registration">
           <div className="reminder">
-            <p>Get 100 Online Courses for Free</p>
-            <h1>Register to get it</h1>
+            <p>Получите доступ к 100 онлайн-курсам бесплатно</p>
+            <h1>Зарегистрируйтесь, чтобы получить их</h1>
             <div className="time">
               <div className="date">
                 18
-                <br /> Days
+                <br /> Дней
               </div>
               <div className="date">
                 23
-                <br /> Hours
+                <br /> Часа
               </div>
               <div className="date">
                 06
-                <br /> Minutes
+                <br /> Минут
               </div>
               <div className="date">
                 58
-                <br /> Seconds
+                <br /> Секунд
               </div>
             </div>
           </div>
           {!authToken ? (
-            <div className="form">
-              <h3>Create Free Account NOW!</h3>
-              <input type="text" placeholder="Name" name="" id="" />
-              <input type="text" placeholder="Email" name="" id="" />
-              <input type="password" placeholder="Password" name="" id="" />
-              <input type="number" placeholder="Phone Number" name="" id="" />
-              <div className="btn">
-                <a className="yellow" href="#">
-                  Submit Form
-                </a>
+              <div className="form">
+                <h3>Создайте бесплатный аккаунт прямо сейчас!</h3>
+                <input type="text" placeholder="Имя" name="" id="" />
+                <input type="text" placeholder="Электронная почта" name="" id="" />
+                <input type="password" placeholder="Пароль" name="" id="" />
+                <input type="number" placeholder="Номер телефона" name="" id="" />
+                <div className="btn">
+                  <a className="yellow" href="#">
+                    Отправить форму
+                  </a>
+                </div>
               </div>
-            </div>
           ) : (
-            <></>
+              <></>
           )}
         </section>
         <Footer />
       </div>
+
     </div>
   );
 }

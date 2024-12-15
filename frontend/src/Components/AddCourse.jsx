@@ -31,14 +31,14 @@ function AddCourse() {
       });
 
       if (response.status === 200) {
-        console.log('Course Added successfully!');
+        console.log('Курс успешно добавлен !');
         navigate("/courses");
       } else {
         const data = await response.json();
         setError(data.error)
       }
     } catch (error) {
-      setError('course add error:', error);
+      setError('ошибка добавления курса:', error);
     }
   };
 

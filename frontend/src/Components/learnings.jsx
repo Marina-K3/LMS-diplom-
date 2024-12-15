@@ -27,10 +27,10 @@ function Learnings(){
             <Navbar page="learnings" />
             <div style={{ textAlign: 'center', marginTop: '10%' }}>
               <h1 style={{ fontSize: '30px', marginBottom: '20px' }}>
-                You have not enrolled in any courses yet...!!!
+                Вы не записаны ни на один курс!
               </h1>
               <p style={{ color: '#666', fontSize: '18px' }}>
-                Explore our courses and start your learning journey.
+                Подберите свой идеальный курс для обучения!
               </p>
               <button
                 style={{
@@ -45,7 +45,7 @@ function Learnings(){
                 }}
                 onClick={() => navigate('/courses')}
               >
-                Explore Courses
+                Изучить курсы
               </button>
             </div>
           </>
@@ -66,10 +66,10 @@ function Learnings(){
                 : course.courseName
               }
             </h3>
-            <p className="course-description">by {course.instructor}</p>
+            <p className="course-description">от {course.instructor}</p>
         </div>
         <Link to={`/course/${course.id}`} style={{textDecoration:"none"}}>
-        <button className="learn-course-button">Start Learning</button>
+        <button className="learn-course-button">Начать обучение</button>
         </Link>
         </div>
       ))}

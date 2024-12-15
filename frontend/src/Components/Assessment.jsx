@@ -71,11 +71,11 @@ const handleCancel = () => {
 let message = '';
 
   if (correctCount === 5) {
-    message = 'Awesome 😎';
+    message = 'Отлично 😎';
   } else if (correctCount >= 3) {
-    message = 'Good 😊';
+    message = 'Хорошо 😊';
   } else {
-    message = 'Poor 😒';
+    message = 'Плохо 😒';
   }
 
   return (

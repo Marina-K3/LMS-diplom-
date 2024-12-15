@@ -1,7 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import './dstyle.css';
 import SideBar from './SideBar';
-import Navbar from './Navbar';
 function Dashboard() {
   // const [dashboard , setDashboard] = useState(0);
   
@@ -16,42 +15,45 @@ function Dashboard() {
   },[])
 
   return (
-    <body style={{backgroundColor:"#eee"}}>
-      <SideBar current={"dashboard"}/>
+
+      <body style={{ backgroundColor: "#eee" }}>
+      <SideBar current={"dashboard"} />
       <section id="content">
-        <Navbar />
+
         <main>
           <div className="head-title">
             <div className="left">
-              <h1 id="dashboard" style={{color:'darkblue'}} > Dashboard</h1>
+              <h1 id="dashboard" style={{ color: "darkblue" }}>Панель управления</h1>
             </div>
           </div>
-          <ul    className="box-info">
+          <ul className="box-info">
             <li>
-            <i className='bx bxs-group' id="i"></i>
+              <i className="bx bxs-group" id="i"></i>
               <span className="text">
-                <h3>{userscount}</h3>
-                <p>Total Users</p>
-              </span>
+            <h3>{userscount}</h3>
+            <p>Всего пользователей</p>
+          </span>
             </li>
             <li>
-            <i className='bx bx-book' id="i"></i>
+              <i className="bx bx-book" id="i"></i>
               <span className="text">
-                <h3>{coursescount}</h3>
-                <p>Total Courses</p>
-              </span>
+            <h3>{coursescount}</h3>
+            <p>Всего курсов</p>
+          </span>
             </li>
             <li>
-              <i className='bx bxs-calendar-check' id="i"></i>
+              <i className="bx bxs-calendar-check" id="i"></i>
               <span className="text">
-                <h3>{enrolled}</h3>
-                <p>Total Enrollment</p>
-              </span>
+            <h3>{enrolled}</h3>
+            <p>Всего записей</p>
+          </span>
             </li>
           </ul>
         </main>
       </section>
-    </body>
+      </body>
+
+
   );
 }
 

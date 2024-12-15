@@ -41,39 +41,40 @@ const Feedback = (props) => {
   useEffect(() => {}, [feedback]);
 
   return (
-    <div className="feedback-main">
-      <div className="get-input">
-        <label htmlFor="email">Your Feedback</label>
-        <input
-          type="text"
-          className="form-control"
-          style={{ width: "100%", marginRight: "50px" }}
-          onChange={(e) => setFeedback(e.target.value)}
-          value={feedback}
-        />
-        <button
-          onClick={sendFeedback}
-          style={{
-            marginTop: "5px",
-            padding: "5px",
-            backgroundColor: "darkviolet",
-            borderRadius: "5px",
-            color: "white",
-          }}
-        >
-          Submit
-        </button>
+      <div className="feedback-main">
+          <div className="get-input">
+              <label htmlFor="email">Ваш отзыв</label>
+              <input
+                  type="text"
+                  className="form-control"
+                  style={{ width: "100%", marginRight: "50px" }}
+                  onChange={(e) => setFeedback(e.target.value)}
+                  value={feedback}
+              />
+              <button
+                  onClick={sendFeedback}
+                  style={{
+                      marginTop: "5px",
+                      padding: "5px",
+                      backgroundColor: "darkviolet",
+                      borderRadius: "5px",
+                      color: "white",
+                  }}
+              >
+                  Отправить
+              </button>
+          </div>
+          <div className="feedback-list">
+              <h3>Последние отзывы:</h3>
+              <ul>
+                  {feedbacks.map((item, index) => (
+                      <li key={index}>{item.comment}</li>
+                  ))}
+              </ul>
+          </div>
+          <br />
       </div>
-      <div className="feedback-list">
-        <h3>Recent Feedbacks:</h3>
-        <ul>
-          {feedbacks.map((item, index) => (
-            <li key={index}>{item.comment}</li>
-          ))}
-        </ul>
-      </div>
-      <br />
-    </div>
+
   );
 };
 

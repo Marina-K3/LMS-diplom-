@@ -17,15 +17,15 @@ function Users() {
           <div className="table-data" style={{marginTop:"-10px"}}>
             <div className="order">
               <div className="head">
-                <h3>Users Info</h3>
+                <h3>Пользователи</h3>
               </div>
               <table id="user" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
               <thead>
                 <tr style={{ borderBottom: '1px solid #ddd' }}>
-                  <th style={{ padding: '10px', textAlign: 'start', borderBottom: '1px solid #ddd' }}>Username</th>
+                  <th style={{ padding: '10px', textAlign: 'start', borderBottom: '1px solid #ddd' }}>Имя</th>
                   <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Email</th>
-                  <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Phone Number</th>
-                  <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Profession</th>
+                  <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Телефон</th>
+                  <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Профессия</th>
                 </tr>
               </thead>
               <tbody>

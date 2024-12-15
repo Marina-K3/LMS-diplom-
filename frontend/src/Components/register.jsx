@@ -36,7 +36,7 @@ function RegistrationForm() {
       });
 
       if (response.status === 200) {
-        console.log("Registration successful!");
+        console.log("Успешно зарегистрированы!");
         navigate("/login");
       } else {
         const data = await response.json();
@@ -52,12 +52,12 @@ function RegistrationForm() {
       <Navbar />
       <div className="registration-auth">
         <div className="registration-container">
-          <h2>User Registration</h2>
+          <h2>Регистрация</h2>
           <form onSubmit={handleSubmit} className="registration-form">
             <div className="registration-input-group">
               <div>
                 <div className="registration-text-area">
-                  <label>Name: </label>
+                  <label>Имя: </label>
                 </div>
                 <input
                   type="text"
@@ -69,7 +69,7 @@ function RegistrationForm() {
               </div>
               <div>
                 <div className="registration-text-area">
-                  <label>Email Id:</label>
+                  <label>Email:</label>
                 </div>
                 <input
                   type="email"
@@ -83,7 +83,7 @@ function RegistrationForm() {
             <div className="registration-input-group">
               <div>
                 <div className="registration-text-area">
-                  <label>Phone no:</label>
+                  <label>Телефон:</label>
                 </div>
                 <input
                   type="tel"
@@ -95,7 +95,7 @@ function RegistrationForm() {
               </div>
               <div>
                 <div className="registration-text-area">
-                  <label>Password:</label>
+                  <label>Пароль:</label>
                 </div>
                 <input
                   type="password"
@@ -109,7 +109,7 @@ function RegistrationForm() {
             <div className="registration-input-group">
               <div>
                 <div className="registration-text-area">
-                  <label>Date of Birth:</label>
+                  <label>Дата рождения:</label>
                 </div>
                 <input
                   type="text"
@@ -120,7 +120,7 @@ function RegistrationForm() {
               </div>
               <div>
                 <div className="registration-text-area">
-                  <label>Gender:</label>
+                  <label>Гендер:</label>
                 </div>
                 <input
                   type="text"
@@ -133,7 +133,7 @@ function RegistrationForm() {
             <div className="registration-input-group">
               <div>
                 <div className="registration-text-area">
-                  <label>Location:</label>
+                  <label>Адрес:</label>
                 </div>
                 <input
                   type="text"
@@ -144,7 +144,7 @@ function RegistrationForm() {
               </div>
               <div>
                 <div className="registration-text-area">
-                  <label>Profession:</label>
+                  <label>Профессия:</label>
                 </div>
                 <input
                   type="text"
@@ -157,7 +157,7 @@ function RegistrationForm() {
             <div className="registration-input-group">
               <div>
                 <div className="registration-text-area">
-                  <label>LinkedIn URL:</label>
+                  <label>LinkedIn:</label>
                 </div>
                 <input
                   type="text"
@@ -168,7 +168,7 @@ function RegistrationForm() {
               </div>
               <div>
                 <div className="registration-text-area">
-                  <label>GitHub URL:</label>
+                  <label>GitHub:</label>
                 </div>
                 <input
                   type="text"
@@ -180,12 +180,12 @@ function RegistrationForm() {
             </div>
             {error && <span className="registration-error-msg">{error}</span>}
             <div className="registration-btn1">
-              <button type="submit">Register</button>
+              <button type="submit">Регистрация</button>
             </div>
           </form>
           <span>
-            Already have an account? login
-            <Link to="/login"> Here</Link>
+            Уже есть аккаунт?
+            <Link to="/login"> Вход</Link>
           </span>
         </div>
       </div>

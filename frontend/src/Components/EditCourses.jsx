@@ -97,35 +97,35 @@ function EditCourse() {
   return (
     <div className='add'>
       <div className='container1'>
-        <h2>Edit Course</h2>
+        <h2>Редактировать курс</h2>
         <form onSubmit={handleSubmit} className="addCourse-form">
-          <label>Course Name: </label>
+          <label>Название курса: </label>
           <input type="text" name="course_name" value={formData.course_name} onChange={handleChange} required style={{ width: "100%" }} />
           {formErrors.course_name && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.course_name}</span>}
 
-          <label>Instructor: </label>
+          <label>Преподаватель: </label>
           <input type="text" name="instructor" value={formData.instructor} onChange={handleChange} required style={{ width: "100%" }} />
           {formErrors.instructor && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.instructor}</span>}
 
-          <label>Price: </label>
+          <label>Цена: </label>
           <input type="number" name="price" value={formData.price} onChange={handleChange} required style={{ width: "100%" }} />
           {formErrors.price && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.price}</span>}
 
-          <label>Description: </label>
+          <label>Описание: </label>
           <input type="text" name="description" value={formData.description} onChange={handleChange} required style={{ width: "100%" }} />
           {formErrors.description && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.description}</span>}
 
-          <label>Video Link: </label>
+          <label>Ссылка на видео: </label>
           <input type="text" name="y_link" value={formData.y_link} onChange={handleChange} required style={{ width: "100%" }} />
           {formErrors.y_link && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.y_link}</span>}
 
-          <label>Image Link: </label>
+          <label>Ссылка на изображение: </label>
           <input type="text" name="p_link" value={formData.p_link} onChange={handleChange} required style={{ width: "100%" }} />
           {formErrors.p_link && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.p_link}</span>}
 
           {error && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'center'}}>{error}</span>}
 
-          <div className='btn1'><button type="submit">Update</button></div> 
+          <div className='btn1'><button type="submit">Редактировать</button></div>
         </form>
       </div>
     </div>

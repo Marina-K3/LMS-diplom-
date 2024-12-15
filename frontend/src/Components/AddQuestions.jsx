@@ -79,7 +79,7 @@ function AddQuestion() {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        console.log('Question Added successfully!');
+        console.log('Вопрос добавлен успешно!');
         toast.success('Question Added successfully', {
             position: 'top-right',
             autoClose: 1000,
